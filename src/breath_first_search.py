@@ -8,11 +8,11 @@ class Graph:
         self.graph = defaultdict(list)
 
     # function to add an edge to graph
-    def addEdge(self, u, v):
+    def add_edge(self, u, v):
         self.graph[u].append(v)
 
     # function to print a BFS of graph
-    def BFS(self, s):
+    def breadth_first_search(self, s):
 
         # Mark all the vertices as not visited
         visited = [False] * (len(self.graph))
@@ -45,15 +45,15 @@ class Graph:
 
 def main():
     graph = Graph()
-    graph.addEdge(0, 1)
-    graph.addEdge(0, 2)
-    graph.addEdge(1, 2)
-    graph.addEdge(2, 0)
-    graph.addEdge(2, 3)
-    graph.addEdge(3, 3)
+    graph.add_edge(0, 1)
+    graph.add_edge(0, 2)
+    graph.add_edge(1, 2)
+    graph.add_edge(2, 0)
+    graph.add_edge(2, 3)
+    graph.add_edge(3, 3)
 
     print("Following is Breadth First Traversal (starting from vertex 2)")
-    graph.BFS(2)
+    graph.breadth_first_search(2)
 
 
 if __name__ == "__main__":
